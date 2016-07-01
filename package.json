@@ -1,0 +1,34 @@
+{
+  "author": "Christoph Guttandin",
+  "dependencies": {
+    "yakbak": "^2.5.0"
+  },
+  "description": "A Karma preprocessor for yakbak.",
+  "devDependencies": {
+    "babel-eslint": "^6.1.0",
+    "chai": "^3.5.0",
+    "eslint-config-holy-grail": "^5.0.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-mocha-test": "^0.12.7",
+    "gruntify-eslint": "^2.0.0",
+    "load-grunt-config": "^0.19.2",
+    "mocha": "^2.5.3",
+    "rewire": "^2.5.2",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "keywords": [
+    "karma",
+    "karma-plugin",
+    "karma-preprocessor",
+    "yakbak"
+  ],
+  "license": "MIT",
+  "main": "src/module.js",
+  "name": "karma-yakbak-preprocessor",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "0.0.0"
+}
