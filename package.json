@@ -1,5 +1,8 @@
 {
   "author": "Christoph Guttandin",
+  "bugs": {
+    "url": "https://github.com/chrisguttandin/karma-yakbak-preprocessor/issues"
+  },
   "dependencies": {
     "yakbak": "^2.5.0"
   },
@@ -18,6 +21,7 @@
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0"
   },
+  "homepage": "https://github.com/chrisguttandin/karma-yakbak-preprocessor",
   "keywords": [
     "karma",
     "karma-plugin",
@@ -27,6 +31,10 @@
   "license": "MIT",
   "main": "src/module.js",
   "name": "karma-yakbak-preprocessor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisguttandin/karma-yakbak-preprocessor.git"
+  },
   "scripts": {
     "test": "grunt test"
   },
