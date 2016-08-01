@@ -11,9 +11,7 @@ module.exports = {
             bail: true,
             clearRequireCache: true,
             require: [
-                function () {
-                    global.expect = chai.expect;
-                }
+                () => global.expect = chai.expect
             ]
         },
         src: [
