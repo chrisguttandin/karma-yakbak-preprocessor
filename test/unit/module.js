@@ -45,7 +45,7 @@ describe('karma-yakbak-preprocessor', () => {
             createYakbakPreprocessor = karmaYakbakPreprocessor['preprocessor:yakbak'][1];
 
             logger = { create: sinon.stub() };
-            log = { debug: sinon.spy(), error: sinon.spy () };
+            log = { debug: sinon.spy(), error: sinon.spy() };
 
             logger.create.returns(log);
         });
