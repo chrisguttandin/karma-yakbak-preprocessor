@@ -38,7 +38,7 @@
     "url": "https://github.com/chrisguttandin/karma-yakbak-preprocessor.git"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt lint && grunt test"
   },
   "version": "0.0.3"
 }
