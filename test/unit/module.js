@@ -114,7 +114,7 @@ describe('karma-yakbak-preprocessor', () => {
                     originalPath = 'a fake originalPath',
                     preprocessor = createYakbakPreprocessor({ replace: [ url ] }, logger);
 
-                preprocessor(content, { originalPath }, done)
+                preprocessor(content, { originalPath }, done);
 
                 expect(log.debug).to.have.been.calledTwice;
                 expect(log.debug).to.have.been.calledWithExactly('Replacing all occurrences of "%s" in "%s".', url, originalPath);
