@@ -1,6 +1,7 @@
-var http = require('http'),
-    path = require('path'),
-    yakbak = require('yakbak');
+// The following require statements use let because they need to be reassigned for testing.
+let http = require('http'); // eslint-disable-line prefer-const
+let path = require('path'); // eslint-disable-line prefer-const
+let yakbak = require('yakbak'); // eslint-disable-line prefer-const
 
 const createYakbakPreprocessor = ({ autoStart = [], tapes = 'tapes', replace = [] }, logger) => {
     const log = logger.create('preprocessor.yakbak');
@@ -24,15 +25,15 @@ const createYakbakPreprocessor = ({ autoStart = [], tapes = 'tapes', replace = [
     };
 
     // Start all proxy servers which should start automatically.
-    for (let [ index, url ] of autoStart.entries()) {
+    for (const [ index, url ] of autoStart.entries()) {
         startServer(url, 3000 + index);
     }
 
     return (content, file, done) => {
-        for (let [ index, url ] of replace.entries()) {
-            let regex = new RegExp(url
-                    .replace(/\//g, '\\/')
-                    .replace(/\./g, '\\.'), 'g');
+        for (const [ index, url ] of replace.entries()) {
+            const regex = new RegExp(url
+                .replace(/\//g, '\\/')
+                .replace(/\./g, '\\.'), 'g');
 
             if (regex.test(content)) {
                 let port = 3000 + autoStart.length + index;
