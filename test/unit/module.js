@@ -1,15 +1,15 @@
-var rewire = require('rewire'),
-    sinon = require('sinon');
+const rewire = require('rewire');
+const sinon = require('sinon');
 
 describe('karma-yakbak-preprocessor', () => {
 
-    var http,
-        httpServer,
-        karmaYakbakPreprocessor,
-        path,
-        resolvedPath,
-        yakbak,
-        yakbakServer;
+    let http;
+    let httpServer;
+    let karmaYakbakPreprocessor;
+    let path;
+    let resolvedPath;
+    let yakbak;
+    let yakbakServer;
 
     beforeEach(() => {
         karmaYakbakPreprocessor = rewire('../../src/module.js');
@@ -37,9 +37,9 @@ describe('karma-yakbak-preprocessor', () => {
 
     describe('createYakbakPreprocessor()', () => {
 
-        var createYakbakPreprocessor,
-            log,
-            logger;
+        let createYakbakPreprocessor;
+        let log;
+        let logger;
 
         beforeEach(() => {
             createYakbakPreprocessor = karmaYakbakPreprocessor['preprocessor:yakbak'][1];
@@ -70,7 +70,7 @@ describe('karma-yakbak-preprocessor', () => {
         describe('with an autoStart option and an empty replace option', () => {
 
             it('should create a server right away', () => {
-                var url = 'a://fake.url';
+                const url = 'a://fake.url';
 
                 createYakbakPreprocessor({ autoStart: [ url ] }, logger);
 
@@ -94,7 +94,7 @@ describe('karma-yakbak-preprocessor', () => {
 
         describe('with an empty autoStart option and a replace option', () => {
 
-            var url;
+            let url;
 
             beforeEach(() => url = 'a://fake.url');
 
@@ -109,10 +109,10 @@ describe('karma-yakbak-preprocessor', () => {
             });
 
             it('should not create a server when preprocessing', () => {
-                var content = `some random content which contains the ${ url } and not much more`,
-                    done = sinon.stub(),
-                    originalPath = 'a fake originalPath',
-                    preprocessor = createYakbakPreprocessor({ replace: [ url ] }, logger);
+                const content = `some random content which contains the ${ url } and not much more`;
+                const done = sinon.stub();
+                const originalPath = 'a fake originalPath';
+                const preprocessor = createYakbakPreprocessor({ replace: [ url ] }, logger);
 
                 preprocessor(content, { originalPath }, done);
 
