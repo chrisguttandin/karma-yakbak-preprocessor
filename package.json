@@ -8,7 +8,6 @@
   },
   "description": "A Karma preprocessor for yakbak.",
   "devDependencies": {
-    "babel-eslint": "^7.0.0",
     "chai": "^3.5.0",
     "eslint-config-holy-grail": "^17.0.0",
     "grunt": "^1.0.1",
