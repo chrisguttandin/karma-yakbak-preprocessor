@@ -6,6 +6,9 @@
   "dependencies": {
     "yakbak": "^2.5.0"
   },
+  "engines": {
+    "node": ">=6.10.3"
+  },
   "description": "A Karma preprocessor for yakbak.",
   "devDependencies": {
     "chai": "^3.5.0",
