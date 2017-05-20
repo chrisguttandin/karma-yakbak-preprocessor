@@ -6,9 +6,6 @@
   "dependencies": {
     "yakbak": "^2.5.0"
   },
-  "engines": {
-    "node": ">=6.10.3"
-  },
   "description": "A Karma preprocessor for yakbak.",
   "devDependencies": {
     "chai": "^3.5.0",
@@ -24,6 +21,9 @@
     "rewire": "^2.5.2",
     "sinon": "^2.0.0",
     "sinon-chai": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=6.10.3"
   },
   "files": [
     "src/"
