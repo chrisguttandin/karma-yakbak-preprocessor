@@ -25,6 +25,9 @@
     "sinon": "^2.0.0",
     "sinon-chai": "^2.8.0"
   },
+  "files": [
+    "src/"
+  ],
   "homepage": "https://github.com/chrisguttandin/karma-yakbak-preprocessor",
   "keywords": [
     "karma",
