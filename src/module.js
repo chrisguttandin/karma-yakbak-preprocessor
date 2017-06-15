@@ -6,7 +6,6 @@ let yakbak = require('yakbak'); // eslint-disable-line prefer-const
 const createYakbakPreprocessor = ({ autoStart = [], tapes = 'tapes', replace = [] }, logger) => {
     const log = logger.create('preprocessor.yakbak');
     const ports = new Map();
-
     const startServer = (url, port) => {
         if (ports.has(url)) {
             return ports.get(url);
