@@ -29,6 +29,8 @@ const createYakbakPreprocessor = ({ autoStart = [], tapes = 'tapes', replace = [
     }
 
     return (content, file, done) => {
+        let replacedContent = content;
+
         for (const [ index, url ] of replace.entries()) {
             const regex = new RegExp(url
                 .replace(/\//g, '\\/')
@@ -41,11 +43,11 @@ const createYakbakPreprocessor = ({ autoStart = [], tapes = 'tapes', replace = [
 
                 port = startServer(url, port);
 
-                content = content.replace(regex, `http://localhost:${ port }`);
+                replacedContent = replacedContent.replace(regex, `http://localhost:${ port }`);
             }
         }
 
-        done(content);
+        done(replacedContent);
     };
 };
 
