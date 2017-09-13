@@ -24,14 +24,14 @@ const createYakbakPreprocessor = ({ autoStart = [], tapes = 'tapes', replace = [
     };
 
     // Start all proxy servers which should start automatically.
-    for (const [ index, url ] of autoStart.entries()) {
+    for (const [ index, url ] of autoStart.entries()) {
         startServer(url, 3000 + index);
     }
 
     return (content, file, done) => {
         let replacedContent = content;
 
-        for (const [ index, url ] of replace.entries()) {
+        for (const [ index, url ] of replace.entries()) {
             const regex = new RegExp(url
                 .replace(/\//g, '\\/')
                 .replace(/\./g, '\\.'), 'g');
