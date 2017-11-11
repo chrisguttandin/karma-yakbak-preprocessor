@@ -1,8 +1,8 @@
-// The following require statements use let because they need to be reassigned for testing.
-let http = require('http'); // eslint-disable-line prefer-const
-let path = require('path'); // eslint-disable-line prefer-const
-let yakbak = require('yakbak'); // eslint-disable-line prefer-const
+const http = require('http');
+const path = require('path');
+const yakbak = require('yakbak');
 
+// eslint-disable-next-line padding-line-between-statements
 const createYakbakPreprocessor = ({ autoStart = [], tapes = 'tapes', replace = [] }, logger) => {
     const log = logger.create('preprocessor.yakbak');
     const ports = new Map();
