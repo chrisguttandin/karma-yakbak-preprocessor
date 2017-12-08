@@ -1,3 +1,11 @@
+# Status: **!!! DEPRECATED !!!**
+
+This module is deprecated. As the name of this module implies, it depends on
+[yakbak](https://github.com/flickr/yakbak) which hasn't been updated for a
+while. In the meantime some of yakbak's dependencies have been reported to have
+security vulnerabilities. It's therefore not really possible to keep this module
+in a healthy condition and that's why it's deprecated now.
+
 # karma-yakbak-preprocessor
 
 **A Karma preprocessor for yakbak.**
